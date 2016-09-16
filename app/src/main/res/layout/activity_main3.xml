@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coord_layout"
+    android:layout_width="match_parent"
+    android:background="@color/some_accent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="kdas.i_nterface.uitest_2.Main3Activity">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_schedule"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/toolbar_event"
+        android:background="@color/some_accent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/month_name"
+                android:text="August"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/some_white"
+                android:layout_alignTop="@+id/textView6"
+                android:layout_alignParentStart="true"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day"
+                android:textSize="20sp"
+                android:id="@+id/textView6"
+                android:fontFamily="sans-serif-light"
+                android:layout_alignTop="@+id/down"
+                android:layout_toStartOf="@+id/down"
+                android:textColor="@color/some_white" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/down"
+                android:src="@drawable/down"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp" />
+
+        </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/view2"
+        android:src="@drawable/user"
+        app:layout_anchor="@+id/toolbar_event"
+        app:layout_anchorGravity="center|bottom"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        app:compactCalendarTargetHeight="240dp"
+        app:compactCalendarTextSize="12sp"
+        app:compactCalendarBackgroundColor="@color/some_teal"
+        app:compactCalendarTextColor="#fff"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
+        app:compactCalendarCurrentDayBackgroundColor="#B71C1C"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        android:visibility="invisible"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab_month"
+        android:src="@drawable/date"
+        app:backgroundTint="@color/some_accent"
+        android:layout_marginEnd="21dp"
+        android:layout_below="@+id/compactcalendar_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:visibility="invisible"/>
+
+
+
+
+</RelativeLayout>

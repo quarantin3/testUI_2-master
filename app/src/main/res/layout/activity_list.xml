@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="kdas.i_nterface.uitest_2.List">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_rv"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/text_dot_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:color_array="@array/dot_colors"
+        app:dot_radius="4dp"
+        app:number_of_dots="8"
+        android:layout_below="@+id/view_rv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp" />
+
+    <com.bhargavms.dotloader.DotLoader
+        android:id="@+id/text_dot_loader_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:color_array="@array/dot_colors_toolbar"
+        app:dot_radius="4dp"
+        app:number_of_dots="2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/text_dot_loader"
+        android:layout_marginTop="19dp" />
+
+
+</RelativeLayout>

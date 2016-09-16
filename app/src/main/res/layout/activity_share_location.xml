@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/some_accent"
+    tools:context="kdas.i_nterface.uitest_2.share_location">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/view5"
+        app:cardElevation="8dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="150dp"
+                android:id="@+id/static_frame"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Static Share"
+                    android:textSize="20sp"
+                    android:paddingTop="100dp"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/textView2"
+                    android:layout_gravity="center" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/share_static"
+                    android:layout_marginTop="75dp"
+                    app:backgroundTint="@color/some_teal"
+                    app:fabSize="normal"
+                    android:src="@drawable/static_share"
+                    android:layout_gravity="center_horizontal|top" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/real_time_frame"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true">
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/share_real"
+                    android:layout_marginTop="75dp"
+                    app:backgroundTint="@color/some_teal"
+                    android:src="@drawable/real_time_share"
+                    app:fabSize="normal"
+                    android:layout_gravity="center_horizontal|top" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Real time"
+                    android:paddingTop="100dp"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kill"
+        android:visibility="invisible"
+        android:src="@drawable/kill"
+        app:backgroundTint="@color/some_red"
+        android:layout_below="@+id/view5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+</RelativeLayout>
